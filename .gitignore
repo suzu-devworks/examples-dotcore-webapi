@@ -227,6 +227,8 @@ ClientBin/
 *.dbproj.schemaview
 *.jfm
 *.pfx
+*.key
+*.crt
 *.publishsettings
 orleans.codegen.cs
 
@@ -351,3 +353,6 @@ MigrationBackup/
 
 # .vscode/environment
 .vscode/
+
+# macos
+.DS_Store
