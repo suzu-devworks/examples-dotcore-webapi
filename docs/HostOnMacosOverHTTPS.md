@@ -174,7 +174,6 @@ LESTENアドレスがlocalhostのみになっていることに気づきまし�
 
 ```console
 $ ss -ltn
-vscode@38facaaccaf5:/workspaces$ ss -ltn
 State       Recv-Q      Send-Q           Local Address:Port            Peer Address:Port      
 LISTEN      0           1024                127.0.0.11:32963                0.0.0.0:*         
 LISTEN      0           512                  127.0.0.1:5000                 0.0.0.0:*         
