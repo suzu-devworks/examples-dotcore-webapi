@@ -15,4 +15,9 @@
     <None Update="nlog.config" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Examples.Infrastructure\Examples.Infrastructure.csproj" />
+    <ProjectReference Include="..\Examples.Domain\Examples.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

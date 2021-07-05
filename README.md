@@ -1,6 +1,8 @@
-# examples-dotnet-webapi
+# examples-dotnet-web
 
-## ASP.NET Core WebAPI
+Workspace for studying ASP.NET programming.
+
+## ASP.NET Core
 
 ### The way to the present
 
@@ -8,23 +10,35 @@
 git clone https://github.com/suzu-devworks/examples-dotnet-webapi.git
 
 dotnet new sln -o .
-dotnet new webapi -o src/ExamplesWebApi
-dotnet sln add src/ExamplesWebApi/ExamplesWebApi.csproj
+dotnet new webapi -o src/Examples.WebApi
+dotnet sln add src/Examples.WebApi/Examples.WebApi.csproj
 
-## clear newline(CR).
-find . -type d -name '.git' -prune -o -type f -print | xargs sed -i 's/\r//g'
-## clear BOM(UTF-8).
-find . -type d -name '.git' -prune -o -type f -print | xargs sed -i -s -e '1s/^\xef\xbb\xbf//'
+dotnet new classlib -o src/Examples.Domain
+dotnet sln add src/Examples.Domain/
+dotnet add src/Examples.WebApi/Examples.WebApi.csproj reference src/Examples.Domain/
+
+dotnet new classlib -o src/Examples.Infrastructure
+dotnet sln add src/Examples.Infrastructure/
+dotnet add src/Examples.WebApi/Examples.WebApi.csproj reference src/Examples.Infrastructure/
 
 ## Add Packages
-dotnet add src/ExamplesWebApi/ package NLog.Extensions.Logging
+cd src/Examples.WebApi
+dotnet add package NLog.Extensions.Logging
 
-## Already in use.
-##dotnet add src/ExamplesWebApi/ package Swashbuckle.AspNetCore
+cd src/Examples.Infrastructure
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 
-dotnet clean
 dotnet restore
-dotnet run --project src/ExamplesWebApi
+doynet build
+
+# Update outdated package
+dotnet list package --outdated
+
+## Tools
+dotnet new tool-manifest
+dotnet tool install dotnet-ef
+dotnet tool restore
+
 ```
 
 ### Referenced.
