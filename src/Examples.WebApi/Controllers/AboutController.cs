@@ -5,7 +5,7 @@ using Microsoft.Extensions.Localization;
 namespace ExamplesWebApi.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class AboutController : Controller
     {
         private readonly IStringLocalizer<AboutController> _localizer;

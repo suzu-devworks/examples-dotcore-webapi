@@ -1,11 +1,12 @@
 using System;
-using ExamplesWebApi.Core;
 
-namespace ExamplesWebApi
+namespace Examples.WebApi.Application.Models
 {
     public class WeatherForecast
     {
         public DateTime Date { get; set; }
+
+        public TimeSpan Elaps { get; set; }
 
         public int TemperatureC { get; set; }
 
@@ -13,6 +14,6 @@ namespace ExamplesWebApi
 
         public string Summary { get; set; }
 
-        public StaticStatus Status { get; set;}
+        public StaticStatus Status { get; set; }
     }
 }

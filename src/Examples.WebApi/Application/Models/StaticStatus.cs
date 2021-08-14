@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
-namespace ExamplesWebApi.Core
+namespace Examples.WebApi.Application.Models
 {
     [JsonConverter(typeof(StaticStatusJsonConverter))]
     public sealed class StaticStatus

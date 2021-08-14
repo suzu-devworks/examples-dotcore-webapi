@@ -111,7 +111,7 @@ open -a "Keychain Access.app"
 
 証明書タブに追加されています。
 
-<img src="./images/screenshot-Keychain.png" width="70%">
+<img src="../images/screenshot-Keychain.png" width="70%">
 
 
 ## Configuration Docker Compose
