@@ -2,22 +2,22 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Examples.WebApi.Application.Commands.LazyCommands;
+using Examples.WebApi.Commands.LazyCommands;
 
 namespace Examples.WebApi.Controllers
 {
     // https://rehansaeed.com/asp-net-core-lazy-command-pattern/
 
     [Route("api/v1/[controller]")]
-    public class RocketController : Controller
+    public class LazyCommandController : Controller
     {
-        private readonly ILogger<RocketController> _logger;
+        private readonly ILogger<LazyCommandController> _logger;
 
         private readonly Lazy<IGetRocketCommand> _getRocketCommand;
         private readonly Lazy<ILaunchRocketCommand> _launchRocketCommand;
 
-        public RocketController(
-            ILogger<RocketController> logger,
+        public LazyCommandController(
+            ILogger<LazyCommandController> logger,
             Lazy<IGetRocketCommand> getRocketCommand,
             Lazy<ILaunchRocketCommand> launchRocketCommand)
         {

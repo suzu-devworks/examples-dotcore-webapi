@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Examples.WebApi.Application.Repositories;
 
-namespace Examples.WebApi.Application.Commands.LazyCommands
+namespace Examples.WebApi.Commands.LazyCommands
 {
     public class GetRocketCommand : IGetRocketCommand
     {

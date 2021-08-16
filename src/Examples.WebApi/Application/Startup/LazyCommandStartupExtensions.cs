@@ -1,13 +1,13 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
-using Examples.WebApi.Application.Commands.LazyCommands;
+using Examples.WebApi.Commands.LazyCommands;
 using Examples.WebApi.Application.Repositories;
 
-namespace Examples.WebApi.Application.Extensions
+namespace Examples.WebApi.Application.Startup
 {
-    public static class RocketControllerExtensions
+    public static class LazyCommandControllerStartupExtensions
     {
-        public static IServiceCollection UseRocketRepositories(this IServiceCollection services)
+        public static IServiceCollection UseLazyCommandRepositories(this IServiceCollection services)
         {
             services.AddScoped<IPlanetRepository, PlanetRepository>();
             services.AddScoped<IRocketRepository, RocketRepository>();

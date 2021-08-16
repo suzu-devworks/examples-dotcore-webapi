@@ -11,6 +11,8 @@ indent_style = space
 trim_trailing_whitespace = true
 
 [*.cs]
+dotnet_sort_system_directives_first = true;
+dotnet_separate_import_directive_groups = false;
 
 [*.{yaml,tml,json}]
 indent_size = 2

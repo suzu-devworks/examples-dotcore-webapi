@@ -1,10 +1,8 @@
-using System.Security.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using NLog.Extensions.Logging;
+using Examples.WebApi.Infrastructure.Extensions;
 
-namespace ExamplesWebApi
+namespace Examples.WebApi
 {
     public class Program
     {
@@ -19,14 +17,7 @@ namespace ExamplesWebApi
                 {
                     webBuilder.UseStartup<Startup>();
                 })
-                // ----- Add NLog
-                .ConfigureLogging(logging =>
-                {
-                    logging.ClearProviders();
-                    logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-                    logging.AddNLog();
-                })
-                // -----.
-                ;
+                .UseCustomLogging();
+
     }
 }

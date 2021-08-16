@@ -2,8 +2,10 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
-namespace ExamplesWebApi.Controllers
+namespace Examples.WebApi.Controllers
 {
+    //https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/localization
+    // ?culture=fr 
 
     [Route("api/v1/[controller]")]
     public class AboutController : Controller

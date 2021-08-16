@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Examples.WebApi.Application.Models;
 
-namespace ExamplesWebApi.Controllers
+namespace ExamplesW.ebApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]

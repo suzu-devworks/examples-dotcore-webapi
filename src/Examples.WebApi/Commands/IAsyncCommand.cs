@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Examples.WebApi.Application.Commands
+namespace Examples.WebApi.Commands
 {
     public interface IAsyncCommand
     {
